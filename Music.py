@@ -87,7 +87,6 @@ class Music():
                             await self.nextSong()
                     if notDownloading:
                             await self.nextSong()
-                            print("check")
 							
 	async def autotest3(self):
 		while True:
@@ -117,7 +116,6 @@ class Music():
 					player.after = None
 					player.stop()
 					player = musicList[0]
-					print("not ok")
 					musicList.pop(0)
 					start_time = time.time()
 					elapsed_time = 0
@@ -134,7 +132,6 @@ class Music():
 						player.after = None
 						player.stop()
 						player = voice.create_ffmpeg_player("auto.mp3", pipe=False, after=lambda: self.my_after())
-						print("ok")
 						mp3 = True
 						start_time = time.time()
 						elapsed_time = 0
@@ -446,7 +443,6 @@ class Music():
                                                     f.close()
                                                     number = (number*2)
                                                     worked4 = False
-                                                    print("here")
                                                     url = ""
                                                     try:
                                                             url = content[number]
@@ -454,10 +450,8 @@ class Music():
                                                     except:
                                                             worked4 = False
                                                     if worked4:
-                                                            print("worked")
                                                             content.pop(number)
                                                             content.pop(number-1)
-                                                            print(content)
                                                             f = open(person, "w")
                                                             content2 = "\n".join(content)
                                                             print(content2)
