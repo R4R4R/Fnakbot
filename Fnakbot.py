@@ -18,7 +18,7 @@ from PIL import Image
 
 bot = commands.Bot(command_prefix='f!')
 
-startup_extensions = ["Music","Logs",  "CommandErrorHandler"]
+startup_extensions = ["Music","Logs"]
 
 @bot.event
 async def on_ready():
